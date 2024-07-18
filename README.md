@@ -64,3 +64,7 @@ _**LoginButton**: A reusable stateless widget for the login button with a placeh
 **BlocBuild** -(BlocBuilder<LoginBloc,LoginState>) => update your ui with builder: (context, state){} this will return widgets 
 
 
+
+
+
+Bloc Listener - > doing logic leve operation like condition,navigation,display toast ,etc  
