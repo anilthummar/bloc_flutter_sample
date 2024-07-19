@@ -4,14 +4,20 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'counter_event.dart';
 import 'counter_state.dart';
 
+/// BLoC for managing counter events and states.
+class CountBloc extends Bloc<CounterEvent, CounterState> {
 
+  /// Initializes the CountBloc with the initial state.
+  CountBloc() : super(CounterInitialState(initialCount: 0)) {
 
-/// BLoC class for handling login events and states
-class CounterBloc extends Bloc<CounterEvent, CounterState> {
+    /// Event handler for incrementing the counter.
+    on<CounterIncrementEvent>((event, emit) {
+      emit(CounterIncrementedState(incrementedCount: event.intEvent + 1));
+    });
 
-  CounterBloc() : super(CounterInitState(counter: 0)) {
-     on<CounterEvent>((event, emit) {
-       // emit(CounterIncrementState(incrementCounter: event.props));
-     },);
+    /// Event handler for decrementing the counter.
+    on<CounterDecrementEvent>((event, emit) {
+      emit(CounterDecrementedState(decrementedCount: event.dntEvent - 1));
+    });
   }
 }

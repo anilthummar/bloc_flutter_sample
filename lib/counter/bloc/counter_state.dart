@@ -1,34 +1,41 @@
 import 'package:equatable/equatable.dart';
 
+import 'package:equatable/equatable.dart';
+
+/// Abstract base class for counter states.
+/// It extends Equatable to enable state comparison.
 abstract class CounterState extends Equatable {
   @override
   List<Object?> get props => [];
 }
 
-class CounterInitState extends CounterState {
+/// State representing the initial state of the counter.
+class CounterInitialState extends CounterState {
+  final int initialCount;
 
-  int? counter;
-
-  CounterInitState({required this.counter});
-  @override
-  List<Object?> get props => [counter];
-}
-
-class CounterIncrementState extends CounterState {
-  int? incrementCounter;
-
-  CounterIncrementState({required this.incrementCounter});
+  CounterInitialState({required this.initialCount});
 
   @override
-  List<Object?> get props => [incrementCounter];
+  List<Object?> get props => [initialCount];
 }
 
+/// State representing the counter value after increment.
+class CounterIncrementedState extends CounterState {
+  final int incrementedCount;
 
-class CounterDecrementState extends CounterState {
-  int? decrementCounter;
-
-  CounterDecrementState({required this.decrementCounter});
+  CounterIncrementedState({required this.incrementedCount});
 
   @override
-  List<Object?> get props => [decrementCounter];
+  List<Object?> get props => [incrementedCount];
 }
+
+/// State representing the counter value after decrement.
+class CounterDecrementedState extends CounterState {
+  final int decrementedCount;
+
+  CounterDecrementedState({required this.decrementedCount});
+
+  @override
+  List<Object?> get props => [decrementedCount];
+}
+

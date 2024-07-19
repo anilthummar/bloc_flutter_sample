@@ -5,21 +5,18 @@ abstract class CounterEvent extends Equatable {
   List<Object?> get props => [];
 }
 
-class IncrementEvent extends CounterEvent {
-
-  int? incrementEvent;
-
-  IncrementEvent({required this.incrementEvent});
+class CounterIncrementEvent extends CounterEvent {
+  int intEvent;
+  CounterIncrementEvent({required this.intEvent});
 
   @override
-  List<Object?> get props => [incrementEvent];
+  List<Object?> get props => [intEvent];
 }
-class DecrementEvent extends CounterEvent {
 
-  int? decrementEvent;
-
-  DecrementEvent({required this.decrementEvent});
+class CounterDecrementEvent extends CounterEvent {
+  int dntEvent;
+  CounterDecrementEvent({required this.dntEvent});
 
   @override
-  List<Object?> get props => [decrementEvent];
+  List<Object?> get props => [dntEvent];
 }

@@ -1,6 +1,9 @@
+import 'package:bloc_sample_flutter/counter/counter_page.dart';
 import 'package:bloc_sample_flutter/login/bloc/login_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'counter/bloc/counter_bloc.dart';
+import 'home_page.dart';
 import 'login/login_page.dart';
 
 void main(){
@@ -16,11 +19,14 @@ class MyApp extends StatelessWidget {
      providers: [
         BlocProvider(
         create: (context) =>LoginBloc(),
-        )
+        ),
+       BlocProvider(
+         create: (context) =>CountBloc(),
+       )
      ],
       child:  const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home:LoginPage(),
+        home: HomePage(),
       ),
     );
   }
