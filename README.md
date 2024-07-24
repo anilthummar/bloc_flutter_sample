@@ -69,3 +69,14 @@ _**LoginButton**: A reusable stateless widget for the login button with a placeh
 
 Bloc Listener - > doing logic leve operation like condition,navigation,display toast ,etc 
 Bloc Consumer -> its both combine bloc listener and bloc builder in single widgets
+
+
+
+Using the bloc library **allows us to separate our application into three layers**:
+
+**->Presentation
+->Business Logic
+->DataLayer = 1.Repository  2.Data Provider**
+
+**Data Provider**
+![Bloc State Management](/Users/jeelshah/Desktop/bloc_ui_logic_data.png "Bloc")
