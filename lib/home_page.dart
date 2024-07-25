@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'counter/bloc_selector_page.dart';
 import 'counter/consumer_page.dart';
 import 'counter/counter_repository_provider_page.dart';
+import 'counter/RepositoryProvider/item_repository_list_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -50,6 +51,10 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) =>   RepositoryProviderPage()));
             }, child: const Text("RepositoryProvider Example")),
+            const SizedBox(height: 20,),
+            ElevatedButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) =>   ItemRepositoryListPage()));
+            }, child: const Text("RepositoryProvider Item List Api call")),
           ],
         ),
       ),

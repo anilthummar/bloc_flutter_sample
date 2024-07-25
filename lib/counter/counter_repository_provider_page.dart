@@ -1,11 +1,10 @@
-import 'package:bloc_sample_flutter/counter/bloc/counter_bloc.dart';
 import 'package:bloc_sample_flutter/counter/bloc/counter_event.dart';
 import 'package:bloc_sample_flutter/counter/bloc/counter_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'RepositoryProvider/counter_repository.dart';
 import 'bloc/counter_repository_provider_bloc.dart';
-import 'CounterRepository/counter_repository.dart';
 
 class RepositoryProviderPage extends StatelessWidget {
   final int index = 5;

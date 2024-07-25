@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../CounterRepository/counter_repository.dart';
+import '../RepositoryProvider/counter_repository.dart';
 import 'counter_event.dart';
 import 'counter_state.dart';
 
