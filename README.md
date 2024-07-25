@@ -64,19 +64,15 @@ _**LoginButton**: A reusable stateless widget for the login button with a placeh
 **BlocBuild** -(BlocBuilder<LoginBloc,LoginState>) => update your ui with builder: (context, state){} this will return widgets 
 
 
-
-
-
-Bloc Listener - > doing logic leve operation like condition,navigation,display toast ,etc 
-Bloc Consumer -> its both combine bloc listener and bloc builder in single widgets
-
-
+**Bloc Listener** - > doing logic leve operation like condition,navigation,display toast ,etc 
+**Bloc Consumer** -> its both combine bloc listener and bloc builder in single widgets
 
 **BlocSelector** is a Flutter widget which is analogous to BlocBuilder but allows developers to filter updates by selecting a new value based on the current bloc state. Unnecessary builds are prevented if the selected value does not change. The selected value must be immutable in order for BlocSelector to accurately determine whether builder should be called again.
 
 If the bloc parameter is omitted, BlocSelector will automatically perform a lookup using BlocProvider and the current BuildContext.
 
-
+**RepositoryProvider** #
+**RepositoryProvider** is a Flutter widget which provides a repository to its children via RepositoryProvider.of<T>(context). It is used as a dependency injection (DI) widget so that a single instance of a repository can be provided to multiple widgets within a subtree. BlocProvider should be used to provide blocs whereas RepositoryProvider should only be used for repositories.
 
 Using the bloc library **allows us to separate our application into three layers**:
 

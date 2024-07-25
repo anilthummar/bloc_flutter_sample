@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'counter/bloc_selector_page.dart';
 import 'counter/consumer_page.dart';
+import 'counter/counter_repository_provider_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -44,8 +45,11 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 20,),
             ElevatedButton(onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) =>   BlocSelectorPage()));
-
             }, child: const Text("BlocSelector Example")),
+            const SizedBox(height: 20,),
+            ElevatedButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) =>   RepositoryProviderPage()));
+            }, child: const Text("RepositoryProvider Example")),
           ],
         ),
       ),

@@ -3,7 +3,9 @@ import 'package:bloc_sample_flutter/login/bloc/login_bloc.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'counter/CounterRepository/counter_repository.dart';
 import 'counter/bloc/counter_bloc.dart';
+import 'counter/bloc/counter_repository_provider_bloc.dart';
 import 'home_page.dart';
 import 'login/login_page.dart';
 
@@ -28,7 +30,10 @@ class MyApp extends StatelessWidget {
         ),
        BlocProvider(
          create: (context) =>CountBloc(),
-       )
+       ),
+       BlocProvider(
+         create: (context) =>CounterRepositoryBloc(repository: RepositoryProvider.of<CounterRepository>(context),
+       ),),
      ],
       child:   const MaterialApp(
         debugShowCheckedModeBanner: false,
