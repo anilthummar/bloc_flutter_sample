@@ -72,6 +72,12 @@ Bloc Consumer -> its both combine bloc listener and bloc builder in single widge
 
 
 
+**BlocSelector** is a Flutter widget which is analogous to BlocBuilder but allows developers to filter updates by selecting a new value based on the current bloc state. Unnecessary builds are prevented if the selected value does not change. The selected value must be immutable in order for BlocSelector to accurately determine whether builder should be called again.
+
+If the bloc parameter is omitted, BlocSelector will automatically perform a lookup using BlocProvider and the current BuildContext.
+
+
+
 Using the bloc library **allows us to separate our application into three layers**:
 
 **->Presentation

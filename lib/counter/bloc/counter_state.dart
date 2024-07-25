@@ -1,7 +1,5 @@
 import 'package:equatable/equatable.dart';
 
-import 'package:equatable/equatable.dart';
-
 /// Abstract base class for counter states.
 /// It extends Equatable to enable state comparison.
 abstract class CounterState extends Equatable {
