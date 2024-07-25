@@ -28,8 +28,10 @@ class BlocSelectorPage extends StatelessWidget {
         },
         builder: (context, task) {
           return ListTile(
-            title: Text(
-              task.toString(),
+            title: Center(
+              child: Text(
+                task.toString(),
+              ),
             ),
             trailing: ElevatedButton(
               onPressed: () {
