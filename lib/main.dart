@@ -1,5 +1,6 @@
 import 'package:bloc_sample_flutter/counter/counter_page.dart';
 import 'package:bloc_sample_flutter/login/bloc/login_bloc.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'counter/bloc/counter_bloc.dart';
@@ -7,7 +8,12 @@ import 'home_page.dart';
 import 'login/login_page.dart';
 
 void main(){
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(
+      tools: const [...DevicePreview.defaultTools],
+      builder: (context) => const MyApp(),)
+
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -24,7 +30,7 @@ class MyApp extends StatelessWidget {
          create: (context) =>CountBloc(),
        )
      ],
-      child:  const MaterialApp(
+      child:   const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: HomePage(),
       ),
