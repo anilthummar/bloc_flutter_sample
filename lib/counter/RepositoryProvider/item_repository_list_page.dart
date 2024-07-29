@@ -21,7 +21,7 @@ class ItemRepositoryListPage extends StatelessWidget {
           )..add(FetchProductItem()),
           child: Scaffold(
             appBar: AppBar(
-              title: const Text('Items'),
+              title: const Text('Product Items'),
             ),
             body: BlocBuilder<ProductItemBloc, ProductItemState>(
               builder: (context, state) {

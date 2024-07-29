@@ -15,6 +15,9 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+
+![BLoC Concepts](/Users/jeelshah/Desktop/Screenshot 2024-07-26 at 3.05.39 PM.png "BLoC pattern")
+
 Below is the implementation of a login model using the BLoC pattern:
 
 Step 1: Define the Models
@@ -82,3 +85,4 @@ Using the bloc library **allows us to separate our application into three layers
 
 **Data Provider**
 ![Bloc State Management](/Users/jeelshah/Desktop/bloc_ui_logic_data.png "Bloc")
+
